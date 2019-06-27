@@ -13,7 +13,7 @@ var User = require("./models/user")
 var seedDB = require("./seeds");
     
     //seedDB();
-    mongoose.connect("mongodb://localhost/yelp_camp_v81",{useNewUrlParser : true});
+    mongoose.connect("mongodb+srv://camper:Tcs@1234@letscamp-6fqsr.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser : true});
     app.use(bodyParser.urlencoded({extended:true}));
     app.use(express.static(__dirname + '/public'));
     app.set("view engine","ejs");
@@ -50,6 +50,6 @@ app.use(indexRoutes);
 
 var PORT = 3000 || process.env.PORT;
 
-app.listen(PORT,function(){ 
+app.listen(process.env.PORT,process.env.IP,function(){ 
     console.log("STARTED");
 }); 
