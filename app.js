@@ -50,6 +50,9 @@ app.use(indexRoutes);
 
 var PORT = 3000 || process.env.PORT;
 
-app.listen(process.env.PORT,process.env.IP,function(){ 
+// app.listen(process.env.PORT,process.env.IP,function(){ 
+//     console.log("STARTED");
+// }); 
+app.listen(3000,function(){ 
     console.log("STARTED");
 }); 
